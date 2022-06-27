@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/XC_M6_Java/app/src/main/res/layout/activity_database.xml" value="0.20885416666666667" />
         <entry key="..\:/XC_M6_Java/app/src/main/res/layout/activity_language.xml" value="0.20885416666666667" />
         <entry key="..\:/XC_M6_Java/app/src/main/res/layout/activity_main.xml" value="0.1175925925925926" />
+        <entry key="..\:/XC_M6_Java/app/src/main/res/layout/activity_prefs.xml" value="0.20885416666666667" />
       </map>
     </option>
   </component>

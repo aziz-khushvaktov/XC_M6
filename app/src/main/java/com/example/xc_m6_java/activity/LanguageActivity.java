@@ -1,5 +1,6 @@
 package com.example.xc_m6_java.activity;
 
+import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,14 +8,17 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.xc_m6_java.MyApplication;
 import com.example.xc_m6_java.R;
 import com.example.xc_m6_java.databinding.ActivityLanguageBinding;
+import com.example.xc_m6_java.manager.LocaleManager;
 
 import java.util.Locale;
 
 public class LanguageActivity extends AppCompatActivity {
 
     ActivityLanguageBinding binding;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,24 +29,30 @@ public class LanguageActivity extends AppCompatActivity {
     }
 
     private void initViews() {
+        context = this;
+
         binding.bEnglish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setLocale("en");
+                MyApplication.instance.localeManager.setNewLocale(context, LocaleManager.LANGUAGE_ENGLISH);
+                finish();
             }
         });
 
         binding.bRussian.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View view) {
-                setLocale("ru");
+                MyApplication.instance.localeManager.setNewLocale(context,LocaleManager.LANGUAGE_RUSSIAN);
+                finish();
             }
         });
 
         binding.bUzbek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setLocale("uz");
+                MyApplication.instance.localeManager.setNewLocale(context,LocaleManager.LANGUAGE_UZBEK);
+                finish();
             }
         });
         // one = 1

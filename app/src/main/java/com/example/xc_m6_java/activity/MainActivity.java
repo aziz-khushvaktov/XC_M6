@@ -28,6 +28,30 @@ public class MainActivity extends AppCompatActivity {
                 callLanguageActivity();
             }
         });
+
+        binding.btnSharedPreferenceActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callSharedPreferenceActivity();
+            }
+        });
+
+        binding.bDatabaseActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callDatabaseActivity();
+            }
+        });
+    }
+
+    private void callDatabaseActivity() {
+        Intent intent = new Intent(this,DatabaseActivity.class);
+        startActivity(intent);
+    }
+
+    private void callSharedPreferenceActivity() {
+        Intent intent = new Intent(this,PrefsActivity.class);
+        startActivity(intent);
     }
 
     private void callLanguageActivity() {
