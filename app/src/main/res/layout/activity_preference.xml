@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.LanguageActivity">
+    tools:context=".activity.PreferenceActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             app:layout_scrollFlags="scroll|enterAlways"
             android:layout_height="?attr/actionBarSize"
-            app:title="SharedPreference Activity"
+            app:title="Preference Activity"
             app:titleTextColor="@color/white"/>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -28,25 +28,48 @@
         android:padding="20dp"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/b_english"
+        <EditText
+            android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/str_english"/>
+            android:hint="Email"/>
 
         <Button
-            android:id="@+id/b_russian"
+            android:id="@+id/b_save"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/str_russian"/>
+            android:text="Save"/>
 
         <Button
-            android:id="@+id/b_uzbek"
+            android:id="@+id/b_load"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/str_uzbek"/>
+            android:text="Load"/>
+
+        <Button
+            android:id="@+id/b_remove"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remove"/>
+
+        <Button
+            android:id="@+id/b_clear"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear all"/>
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"/>
+
 
     </LinearLayout>
 

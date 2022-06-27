@@ -15,6 +15,20 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         btn_languageActivity.setOnClickListener { callLanguageActivity() }
+
+        b_PreferenceActivity.setOnClickListener { callSharedPreferenceActivity() }
+
+        b_databaseActivity.setOnClickListener { callDatabaseActivity() }
+    }
+
+    private fun callDatabaseActivity() {
+        val intent = Intent(this,DatabaseActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun callSharedPreferenceActivity() {
+        val intent = Intent(this,PreferenceActivity::class.java)
+        startActivity(intent)
     }
 
     private fun callLanguageActivity() {
